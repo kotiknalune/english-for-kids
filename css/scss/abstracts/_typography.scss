@@ -1,13 +1,13 @@
-.temporary-title {
-    height: 85vh;
-    width: 100vw;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    font-family:'Poppins', Verdana, sans-serif;
-    font-size:50px;
+ @include font-face(Lato, "././assets/fonts/Lato", normal, normal);
 
-    color:#ffffff;
+.card__title {
+font-size: 1.8rem;
+text-transform: uppercase;
+font-family: 'Lato';
+font-weight: normal;
+letter-spacing: 0.15em;
+text-align: center;
+
+margin-bottom:20px;
+color: #30296f;
 }
