@@ -4,12 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English for Kids</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="js/script.js"></script>
   </head>
   <body>
-    <main class="app-container">
-      <h1 class="temporary-title">English for Kids</h1>
+    <header class="header header-container">
+      <nav class="navigation">
+        <div class="navigation__toggle" onclick="menuAnimate()"><span></span><span></span><span></span><span></span></div>
+        <ul class="menu">
+          <li class="menu__item active"><a class="menu__item_main" href="index.html">Main</a></li>
+          <li class="menu__item"><a class="menu__item_space" href="category.html">Space</a></li>
+          <li class="menu__item"><a class="menu__item_food" href="category.html">Food</a></li>
+          <li class="menu__item"><a class="menu__item_nature" href="category.html">Nature</a></li>
+          <li class="menu__item"><a class="menu__item_animals" href="category.html">Animals</a></li>
+        </ul>
+      </nav>
+      <div class="toggle">
+        <input type="checkbox" onclick="bgChange()" id="switch__input">
+        <label class="toggle__switch" for="switch__input"><span class="switch__handle"></span><span class="switch__train">Train</span><span class="switch__play">Play</span></label>
+      </div>
+    </header>
+    <main class="main-container">
+      <div class="container__cards"><a href="category.html">
+          <div class="card">
+            <div class="card__image card__image_space"><img src="assets/images/categories/space-category.png" alt="space"></div>
+            <div class="card__title">Space</div>
+          </div></a><a href="category.html">
+          <div class="card">
+            <div class="card__image card__image_food"><img src="assets/images/categories/food-category.png" alt="food"></div>
+            <div class="card__title">Food</div>
+          </div></a><a href="category.html">
+          <div class="card">
+            <div class="card__image card__image_nature"><img src="assets/images/categories/nature-category.png" alt="nature"></div>
+            <div class="card__title">Nature</div>
+          </div></a><a href="category.html">
+          <div class="card">
+            <div class="card__image card__image_animals"><img src="assets/images/categories/animals-category.png" alt="animals"></div>
+            <div class="card__title">Animals</div>
+          </div></a></div>
     </main>
   </body>
 </html>

@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title English for Kids
+        link(href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet")
+        link(rel = "stylesheet", href = "css/style.css")
+        script(src="js/script.js")
+    body
+        header.header.header-container
+            nav.navigation
+                .navigation__toggle(onclick = "menuAnimate()")
+                    span
+                    span
+                    span
+                    span
+            .toggle
+                input(type="checkbox")#switch__input
+                label(for="switch__input").toggle__switch
+                    span.switch__handle
+                    span.switch__train Train
+                    span.switch__play Play
+        main.main-container
+            .container__cards
+                .card
+                    .card__image.card__image_space
+                        img(src="assets/images/categories/space-category.png" alt="space")
+                    .card__title.space Space
+
+
+
