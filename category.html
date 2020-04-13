@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English for Kids</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
   </head>
   <body>
     <header class="header header-container">
@@ -18,13 +16,28 @@
         <label class="toggle__switch" for="switch__input"><span class="switch__handle"></span><span class="switch__train">Train</span><span class="switch__play">Play</span></label>
       </div>
     </header>
-    <main class="main-container">
+    <main class="main-container" id="category">
       <div class="container__cards">
-        <div class="card">
-          <div class="card__image card__image_space"><img src="assets/images/categories/space-category.png" alt="space"></div>
-          <div class="card__title space">Space</div>
+        <div class="card__container" onmouseleave="returnCard()">
+          <div class="card">
+            <div class="card__card-face">
+              <div class="card__word-image"><img src="assets/images/space/rocket.svg" alt="Rocket"></div>
+              <div class="card__info">
+                <div class="info__button" onclick="flipCard()"><span class="button__icon"></span></div>
+                <div class="info__word">Rocket</div>
+                <div class="sound__button" data-word="rocket" onclick="playSound()"><span class="button__icon"></span></div>
+              </div>
+            </div>
+            <div class="card__card-back">
+              <div class="card__word-image"><img src="assets/images/space/rocket.svg" alt="Rocket"></div>
+              <div class="card__info">
+                <div class="info__word">Ракета</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>

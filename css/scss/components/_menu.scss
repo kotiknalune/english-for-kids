@@ -75,7 +75,6 @@
     left:0;
   }
 
-
 .menu__item {
   height: 60px;
     width: 265px;
@@ -120,6 +119,7 @@
       margin-right: 17px;
       top: 10px;
       background-position: center;
+      background-size: contain;
       transition: 0.3s ease;
     }
 
@@ -159,6 +159,42 @@
   .menu__item_animals {
     &:before {
       background-image: url(/assets/icons/fox.svg);
+    }
+  }
+
+  .menu__item_emotions {
+    &:before {
+      background-image: url(/assets/icons/happy.svg);
+    }
+  }
+
+  .menu__item_colors {
+    &:before {
+      background-image: url(/assets/icons/art.svg);
+    }
+  }
+
+  .menu__item_activities {
+    &:before {
+      background-image: url(/assets/icons/ball.svg);
+    }
+  }
+
+  .menu__item_city {
+    &:before {
+      background-image: url(/assets/icons/traffic.svg);
+    }
+  }
+
+  .menu__item_family {
+    &:before {
+      background-image: url(/assets/icons/heart.svg);
+    }
+  }
+
+  .menu__item_body {
+    &:before {
+      background-image: url(/assets/icons/nose.svg);
     }
   }
 }

@@ -4,9 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title English for Kids
-        link(href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet")
         link(rel = "stylesheet", href = "css/style.css")
-        script(src="js/script.js")
     body
         header.header.header-container
             nav.navigation
@@ -21,12 +19,26 @@ html(lang="en")
                     span.switch__handle
                     span.switch__train Train
                     span.switch__play Play
-        main.main-container
+        main.main-container#category
             .container__cards
-                .card
-                    .card__image.card__image_space
-                        img(src="assets/images/categories/space-category.png" alt="space")
-                    .card__title.space Space
+                    .card__container(onmouseleave = "returnCard()")
+                        .card
+                            .card__card-face
+                                .card__word-image
+                                    img(src="assets/images/space/rocket.svg" alt="Rocket")
+                                .card__info
+                                    .info__button(onclick = "flipCard()")
+                                        span.button__icon
+                                    .info__word Rocket
+                                    .sound__button(data-word = "rocket" onclick="playSound()")
+                                        span.button__icon
+                            .card__card-back
+                                .card__word-image
+                                    img(src="assets/images/space/rocket.svg" alt="Rocket")
+                                .card__info
+                                    .info__word Ракета
+        script(src="js/script.js")
+                       
 
 
 
