@@ -21,7 +21,6 @@ class App {
     this.createCategories();
   }
 
-
   createCategories() {
     const { elements } = this;
     const main = document.querySelector('.main-container');
@@ -32,10 +31,11 @@ class App {
     categories.forEach(category => {
       const categoryCard = document.createElement('div');
       categoryCard.classList.add('category-card');
+
       categoryCard.innerHTML = `
           <a href="#${category.name}">
             <div class="card__image card__image_${category.name}">
-              <img src="../src/assets/images/categories/${category.name}-category.png" alt="${category.name}">
+              <img src="public/images/categories/${category.name}-category.png" alt="${category.name}">
             </div>
             <div class="card__title">${category.name}</div>
           </a>

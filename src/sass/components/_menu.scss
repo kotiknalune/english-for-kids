@@ -141,67 +141,67 @@
   .menu__link {
   &.main {
     &:before {
-      background-image: url(../assets/icons/earth.svg);
+      background-image: url(/src/assets/icons/earth.svg);
     }
   }
 
   &.space {
     &:before {
-      background-image: url(../assets/icons/moon.svg);
+      background-image: url(/src/assets/icons/moon.svg);
     }
   }
 
   &.food {
     &:before {
-      background-image: url(../assets/icons/apple.svg);
+      background-image: url(/src/assets/icons/apple.svg);
     }
   }
 
   &.nature {
     &:before {
-      background-image: url(../assets/icons/log.svg);
+      background-image: url(/src/assets/icons/log.svg);
     }
   }
 
   &.animals {
     &:before {
-      background-image: url(../assets/icons/fox.svg);
+      background-image: url(/src/assets/icons/fox.svg);
     }
   }
 
   &.emotions {
     &:before {
-      background-image: url(../assets/icons/happy.svg);
+      background-image: url(/src/assets/icons/happy.svg);
     }
   }
 
   &.colors {
     &:before {
-      background-image: url(../assets/icons/art.svg);
+      background-image: url(/src/assets/icons/art.svg);
     }
   }
 
   &.activities {
     &:before {
-      background-image: url(../assets/icons/ball.svg);
+      background-image: url(/src/assets/icons/ball.svg);
     }
   }
 
   &.city {
     &:before {
-      background-image: url(../assets/icons/traffic.svg);
+      background-image: url(/src/assets/icons/traffic.svg);
     }
   }
 
   &.family {
     &:before {
-      background-image: url(../assets/icons/heart.svg);
+      background-image: url(/src/assets/icons/heart.svg);
     }
   }
 
   &.body {
     &:before {
-      background-image: url(../assets/icons/nose.svg);
+      background-image: url(/src/assets/icons/nose.svg);
     }
   }
 }

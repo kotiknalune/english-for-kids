@@ -167,37 +167,37 @@ a {
 }
 
 .menu__link.main:before {
-  background-image: url(../assets/icons/earth.svg);
+  background-image: url(/src/assets/icons/earth.svg);
 }
 .menu__link.space:before {
-  background-image: url(../assets/icons/moon.svg);
+  background-image: url(/src/assets/icons/moon.svg);
 }
 .menu__link.food:before {
-  background-image: url(../assets/icons/apple.svg);
+  background-image: url(/src/assets/icons/apple.svg);
 }
 .menu__link.nature:before {
-  background-image: url(../assets/icons/log.svg);
+  background-image: url(/src/assets/icons/log.svg);
 }
 .menu__link.animals:before {
-  background-image: url(../assets/icons/fox.svg);
+  background-image: url(/src/assets/icons/fox.svg);
 }
 .menu__link.emotions:before {
-  background-image: url(../assets/icons/happy.svg);
+  background-image: url(/src/assets/icons/happy.svg);
 }
 .menu__link.colors:before {
-  background-image: url(../assets/icons/art.svg);
+  background-image: url(/src/assets/icons/art.svg);
 }
 .menu__link.activities:before {
-  background-image: url(../assets/icons/ball.svg);
+  background-image: url(/src/assets/icons/ball.svg);
 }
 .menu__link.city:before {
-  background-image: url(../assets/icons/traffic.svg);
+  background-image: url(/src/assets/icons/traffic.svg);
 }
 .menu__link.family:before {
-  background-image: url(../assets/icons/heart.svg);
+  background-image: url(/src/assets/icons/heart.svg);
 }
 .menu__link.body:before {
-  background-image: url(../assets/icons/nose.svg);
+  background-image: url(/src/assets/icons/nose.svg);
 }
 
 #switch__input {
