@@ -70,47 +70,46 @@
   list-style-type: none;
   transition: 0.5s ease;
   overflow: hidden scroll;
-  }
+}
 
- 
-  ::-webkit-scrollbar {
-      width: 0px;
-      background: transparent; 
-  }
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; 
+}
 
 .show {
-    left:0;
-  }
+  left:0;
+}
 
 .menu__item {
   height: 60px;
-    width: 265px;
-    display: inline-block;
-    margin: 0;
-    padding-left: 90px;
-    transition: 0.3s ease;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+  width: 265px;
+  display: inline-block;
+  margin: 0;
+  padding-left: 90px;
+  transition: 0.3s ease;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 
-    &:hover {
-      transform: translate(10px, -3px);
-    }
+  &:hover {
+    transform: translate(10px, -3px);
+  }
 
-    &.active {
-      background-color:#6d5bbe;
-      height: 65px;
-      margin-left: -10px;
+  &.active {
+    background-color:#6d5bbe;
+    height: 65px;
+    margin-left: -10px;
 
-      & a {
-        font-size: 1.9rem;
-        &:before {
-          width:45px;
-          height:45px;
-        }
+    & a {
+      font-size: 1.9rem;
+      &:before {
+        width:45px;
+        height:45px;
       }
     }
+  }
 
-  & a{
+  & a {
     text-decoration: none;
     color: white;
     font-family: 'Lato';
@@ -138,72 +137,71 @@
       }
     }
   }
-
-  .menu__item_main {
+}
+  .menu__link {
+  &.main {
     &:before {
       background-image: url(../assets/icons/earth.svg);
     }
   }
 
-  .menu__item_space {
+  &.space {
     &:before {
       background-image: url(../assets/icons/moon.svg);
     }
   }
 
-  .menu__item_food {
+  &.food {
     &:before {
       background-image: url(../assets/icons/apple.svg);
     }
   }
 
-  .menu__item_nature {
+  &.nature {
     &:before {
       background-image: url(../assets/icons/log.svg);
     }
   }
 
-  .menu__item_animals {
+  &.animals {
     &:before {
       background-image: url(../assets/icons/fox.svg);
     }
   }
 
-  .menu__item_emotions {
+  &.emotions {
     &:before {
       background-image: url(../assets/icons/happy.svg);
     }
   }
 
-  .menu__item_colors {
+  &.colors {
     &:before {
       background-image: url(../assets/icons/art.svg);
     }
   }
 
-  .menu__item_activities {
+  &.activities {
     &:before {
       background-image: url(../assets/icons/ball.svg);
     }
   }
 
-  .menu__item_city {
+  &.city {
     &:before {
       background-image: url(../assets/icons/traffic.svg);
     }
   }
 
-  .menu__item_family {
+  &.family {
     &:before {
       background-image: url(../assets/icons/heart.svg);
     }
   }
 
-  .menu__item_body {
+  &.body {
     &:before {
       background-image: url(../assets/icons/nose.svg);
     }
   }
 }
-
-

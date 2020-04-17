@@ -30,6 +30,10 @@
   color: #30296f;
 }
 
+a {
+  text-decoration: none;
+}
+
 .navigation__toggle {
   width: 45px;
   height: 45px;
@@ -161,37 +165,38 @@
   width: 45px;
   height: 45px;
 }
-.menu__item .menu__item_main:before {
+
+.menu__link.main:before {
   background-image: url(../assets/icons/earth.svg);
 }
-.menu__item .menu__item_space:before {
+.menu__link.space:before {
   background-image: url(../assets/icons/moon.svg);
 }
-.menu__item .menu__item_food:before {
+.menu__link.food:before {
   background-image: url(../assets/icons/apple.svg);
 }
-.menu__item .menu__item_nature:before {
+.menu__link.nature:before {
   background-image: url(../assets/icons/log.svg);
 }
-.menu__item .menu__item_animals:before {
+.menu__link.animals:before {
   background-image: url(../assets/icons/fox.svg);
 }
-.menu__item .menu__item_emotions:before {
+.menu__link.emotions:before {
   background-image: url(../assets/icons/happy.svg);
 }
-.menu__item .menu__item_colors:before {
+.menu__link.colors:before {
   background-image: url(../assets/icons/art.svg);
 }
-.menu__item .menu__item_activities:before {
+.menu__link.activities:before {
   background-image: url(../assets/icons/ball.svg);
 }
-.menu__item .menu__item_city:before {
+.menu__link.city:before {
   background-image: url(../assets/icons/traffic.svg);
 }
-.menu__item .menu__item_family:before {
+.menu__link.family:before {
   background-image: url(../assets/icons/heart.svg);
 }
-.menu__item .menu__item_body:before {
+.menu__link.body:before {
   background-image: url(../assets/icons/nose.svg);
 }
 
@@ -347,6 +352,10 @@
   background: #8bcee6;
 }
 
+.card__image_home {
+  background: #beeae8;
+}
+
 .card__word-image {
   position: relative;
   height: 180px;
@@ -380,7 +389,7 @@
   height: 25px;
   top: 8px;
   left: 8px;
-  background: url(/assets/icons/rotate.svg);
+  background: url(/src/assets/icons/rotate.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -399,7 +408,7 @@
   height: 19px;
   top: 12px;
   left: 10px;
-  background: url(/assets/icons/sound.svg);
+  background: url(/src/assets/icons/sound.svg);
   background-size: cover;
 }
 
