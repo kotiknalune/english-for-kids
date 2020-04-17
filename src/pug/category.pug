@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title English for Kids
+        link(rel = "stylesheet", href = "src/sass/style.css")
+    body
+        main.main-container#category
+            .container__cards
+                    .card__container(onmouseleave = "returnCard()")
+                        .card
+                            .card__card-face
+                                .card__word-image
+                                    img(src="src/assets/images/space/rocket.svg" alt="Rocket")
+                                .card__info
+                                    .info__button(onclick = "flipCard()")
+                                        span.button__icon
+                                    .info__word Rocket
+                                    .sound__button(data-word = "rocket" onclick="playSound()")
+                                        span.button__icon
+                            .card__card-back
+                                .card__word-image
+                                    img(src="src/assets/images/space/rocket.svg" alt="Rocket")
+                                .card__info
+                                    .info__word Ракета
+        script(src="src/js/script.js")
+                       
+
+
+

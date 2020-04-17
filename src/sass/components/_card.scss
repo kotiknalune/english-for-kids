@@ -1,0 +1,113 @@
+.card__word-image {
+  position: relative;
+  height: 180px;
+  margin-bottom: 25px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  img {
+    width: 160px;
+    position: relative;
+    top: 18px;
+    left: 44px;
+  }
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info__button {
+  @extend%card-button;
+
+  background: #23d5ab;
+  right: 0;
+  border-bottom-right-radius: 18px;
+  border-top-left-radius: 30px;
+
+  & .button__icon {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    top: 8px;
+    left: 8px;
+    background: url(/assets/icons/rotate.svg);
+    @include cover-background;
+  }
+}
+
+.sound__button { 
+    @extend%card-button;
+  
+    background: #24d7f7;
+    left: 0;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 30px;
+
+    & .button__icon {
+      display: block;
+      position: relative;
+      width: 19px;
+      height: 19px;
+      top: 12px;
+      left: 10px;
+      background: url(/assets/icons/sound.svg);
+      background-size: cover;
+    }   
+}
+
+.card__container {
+  perspective: 600;
+  position: relative;
+  width: 250px;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  width: 100%;
+  display: inline-block;
+  margin: 15px;
+  border-radius: 19px;
+  position: absolute;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 99;
+  transition: 0.5s ease;
+
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+
+.card:hover {
+ box-shadow: 5px 6px 17px #24d7f7;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.hidden {
+ opacity:0;
+}
+
+.card__card-face {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card__card-back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.card__play {
+  width: 195px;
+  position: relative;
+  top: 25px;
+  left: 11.5%;
+}
