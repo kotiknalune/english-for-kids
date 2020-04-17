@@ -3,44 +3,44 @@
     "name": "space",
     "words": [
       {
-        "word": "rocket",
-        "translation": "ракета"
+        "en": "rocket",
+        "ru": "ракета"
       },
       {
-        "word": "sun",
-        "translation": "cолнце"
+        "en": "sun",
+        "ru": "cолнце"
       },
       {
-        "word": "moon",
-        "translation": "луна"
+        "en": "moon",
+        "ru": "луна"
       },
       {
-        "word": "planet",
-        "translation": "планета"
+        "en": "planet",
+        "ru": "планета"
       },
       {
-        "word": "atom",
-        "translation": "атом"
+        "en": "atom",
+        "ru": "атом"
       },
       {
-        "word": "comet",
-        "translation": "комета"
+        "en": "comet",
+        "ru": "комета"
       },
       {
-        "word": "satellite",
-        "translation": "спутник"
+        "en": "satellite",
+        "ru": "спутник"
       },
       {
-        "word": "astronaut",
-        "translation": "астронавт"
+        "en": "astronaut",
+        "ru": "астронавт"
       },
       {
-        "word": "earth",
-        "translation": "земля"
+        "en": "earth",
+        "ru": "земля"
       },
       {
-        "word": "telescope",
-        "translation": "телескоп"
+        "en": "telescope",
+        "ru": "телескоп"
       }
     ]
   },
@@ -48,60 +48,52 @@
     "name": "food",
     "words": [
       {
-        "word": "apple",
-        "translation": "яблоко"
+        "en": "apple",
+        "ru": "яблоко"
       },
       {
-        "word": "banana",
-        "translation": "банан"
+        "en": "banana",
+        "ru": "банан"
       },
       {
-        "word": "fish",
-        "translation": "рыба"
+        "en": "fish",
+        "ru": "рыба"
       },
       {
-        "word": "bread",
-        "translation": "хлеб"
+        "en": "bread",
+        "ru": "хлеб"
       },
       {
-        "word": "groceries",
-        "translation": "продукты"
+        "en": "groceries",
+        "ru": "продукты"
       },
       {
-        "word": "cheese",
-        "translation": "сыр"
+        "en": "cheese",
+        "ru": "сыр"
       },
       {
-        "word": "pumpkin",
-        "translation": "тыква"
+        "en": "pumpkin",
+        "ru": "тыква"
       },
       {
-        "word": "shrimp",
-        "translation": "креветка"
+        "en": "shrimp",
+        "ru": "креветка"
       },
       {
-        "word": "tomato",
-        "translation": "помидор"
+        "en": "tomato",
+        "ru": "помидор"
       },
       {
-        "word": "cabbage",
-        "translation": "капуста"
+        "en": "cabbage",
+        "ru": "капуста"
       },
       {
-        "word": "pot",
-        "translation": "кастрюля"
+        "en": "water",
+        "ru": "вода"
       },
       {
-        "word": "water",
-        "translation": "вода"
-      },
-      {
-        "word": "pan",
-        "translation": "сковорода"
-      },
-      {
-        "word": "orange",
-        "translation": "апельсин"
+        "en": "orange",
+        "ru": "апельсин"
       }
     ]
   },
@@ -109,52 +101,52 @@
     "name": "animals",
     "words": [
       {
-        "word": "chick",
-        "translation": "цыпленок"
+        "en": "chick",
+        "ru": "цыпленок"
       },
       {
-        "word": "whale",
-        "translation": "кит"
+        "en": "whale",
+        "ru": "кит"
       },
       {
-        "word": "pig",
-        "translation": "свинья"
+        "en": "pig",
+        "ru": "свинья"
       },
       {
-        "word": "fox",
-        "translation": "лиса"
+        "en": "fox",
+        "ru": "лиса"
       },
       {
-        "word": "koala",
-        "translation": "коала"
+        "en": "koala",
+        "ru": "коала"
       },
       {
-        "word": "tiger",
-        "translation": "тигр"
+        "en": "tiger",
+        "ru": "тигр"
       },
       {
-        "word": "crab",
-        "translation": "краб"
+        "en": "crab",
+        "ru": "краб"
       },
       {
-        "word": "bull",
-        "translation": "бык"
+        "en": "bull",
+        "ru": "бык"
       },
       {
-        "word": "hedgehog",
-        "translation": "ёжик"
+        "en": "hedgehog",
+        "ru": "ёжик"
       },
       {
-        "word": "hippo",
-        "translation": "гиппопотам"
+        "en": "hippo",
+        "ru": "гиппопотам"
       },
       {
-        "word": "lemur",
-        "translation": "лемур"
+        "en": "lemur",
+        "ru": "лемур"
       },
       {
-        "word": "zebra",
-        "translation": "зебра"
+        "en": "zebra",
+        "ru": "зебра"
       }
     ]
   },
@@ -162,52 +154,52 @@
     "name": "body",
     "words": [
       {
-        "word": "head",
-        "translation": "голова"
+        "en": "head",
+        "ru": "голова"
       },
       {
-        "word": "neck",
-        "translation": "шея"
+        "en": "neck",
+        "ru": "шея"
       },
       {
-        "word": "hand",
-        "translation": "рука"
+        "en": "hand",
+        "ru": "рука"
       },
       {
-        "word": "dna",
-        "translation": "днк"
+        "en": "dna",
+        "ru": "днк"
       },
       {
-        "word": "nose",
-        "translation": "нос"
+        "en": "nose",
+        "ru": "нос"
       },
       {
-        "word": "skull",
-        "translation": "череп"
+        "en": "skull",
+        "ru": "череп"
       },
       {
-        "word": "lips",
-        "translation": "губы"
+        "en": "lips",
+        "ru": "губы"
       },
       {
-        "word": "ear",
-        "translation": "ухо"
+        "en": "ear",
+        "ru": "ухо"
       },
       {
-        "word": "tooth",
-        "translation": "зуб"
+        "en": "tooth",
+        "ru": "зуб"
       },
       {
-        "word": "lungs",
-        "translation": "легкие"
+        "en": "lungs",
+        "ru": "легкие"
       },
       {
-        "word": "kidneys",
-        "translation": "почки"
+        "en": "kidneys",
+        "ru": "почки"
       },
       {
-        "word": "stomach",
-        "translation": "желудок"
+        "en": "stomach",
+        "ru": "желудок"
       }
     ]
   },
@@ -215,44 +207,44 @@
     "name": "nature",
     "words": [
       {
-        "word": "forest",
-        "translation": "лес"
+        "en": "forest",
+        "ru": "лес"
       },
       {
-        "word": "beach",
-        "translation": "пляж"
+        "en": "beach",
+        "ru": "пляж"
       },
       {
-        "word": "lake",
-        "translation": "озеро"
+        "en": "lake",
+        "ru": "озеро"
       },
       {
-        "word": "volcano",
-        "translation": "вулкан"
+        "en": "volcano",
+        "ru": "вулкан"
       },
       {
-        "word": "rainbow",
-        "translation": "радуга"
+        "en": "rainbow",
+        "ru": "радуга"
       },
       {
-        "word": "desert",
-        "translation": "пустыня"
+        "en": "desert",
+        "ru": "пустыня"
       },
       {
-        "word": "snow",
-        "translation": "снег"
+        "en": "snow",
+        "ru": "снег"
       },
       {
-        "word": "tree",
-        "translation": "дерево"
+        "en": "tree",
+        "ru": "дерево"
       },
       {
-        "word": "flower",
-        "translation": "цветок"
+        "en": "flower",
+        "ru": "цветок"
       },
       {
-        "word": "mountain",
-        "translation": "гора"
+        "en": "mountain",
+        "ru": "гора"
       }
     ]
   },
@@ -260,52 +252,52 @@
     "name": "activities",
     "words": [
       {
-        "word": "learn",
-        "translation": "учиться"
+        "en": "learn",
+        "ru": "учиться"
       },
       {
-        "word": "read",
-        "translation": "читать"
+        "en": "read",
+        "ru": "читать"
       },
       {
-        "word": "cry",
-        "translation": "плакать"
+        "en": "cry",
+        "ru": "плакать"
       },
       {
-        "word": "play",
-        "translation": "играть"
+        "en": "play",
+        "ru": "играть"
       },
       {
-        "word": "talk",
-        "translation": "говорить"
+        "en": "talk",
+        "ru": "говорить"
       },
       {
-        "word": "win",
-        "translation": "побеждать"
+        "en": "win",
+        "ru": "побеждать"
       },
       {
-        "word": "dance",
-        "translation": "танцевать"
+        "en": "dance",
+        "ru": "танцевать"
       },
       {
-        "word": "swim",
-        "translation": "плавать"
+        "en": "swim",
+        "ru": "плавать"
       },
       {
-        "word": "draw",
-        "translation": "рисовать"
+        "en": "draw",
+        "ru": "рисовать"
       },
       {
-        "word": "eat",
-        "translation": "есть"
+        "en": "eat",
+        "ru": "есть"
       },
       {
-        "word": "sleep",
-        "translation": "спать"
+        "en": "sleep",
+        "ru": "спать"
       },
       {
-        "word": "run",
-        "translation": "бегать"
+        "en": "run",
+        "ru": "бегать"
       }
     ]
   },
@@ -313,44 +305,44 @@
     "name": "colors",
     "words": [
       {
-        "word": "white",
-        "translation": "белый"
+        "en": "white",
+        "ru": "белый"
       },
       {
-        "word": "yellow",
-        "translation": "желтый"
+        "en": "yellow",
+        "ru": "желтый"
       },
       {
-        "word": "orange",
-        "translation": "оранжевый"
+        "en": "orange",
+        "ru": "оранжевый"
       },
       {
-        "word": "red",
-        "translation": "красный"
+        "en": "red",
+        "ru": "красный"
       },
       {
-        "word": "purple",
-        "translation": "фиолетовый"
+        "en": "purple",
+        "ru": "фиолетовый"
       },
       {
-        "word": "blue",
-        "translation": "синий"
+        "en": "blue",
+        "ru": "синий"
       },
       {
-        "word": "green",
-        "translation": "зеленый"
+        "en": "green",
+        "ru": "зеленый"
       },
       {
-        "word": "brown",
-        "translation": "коричневый"
+        "en": "brown",
+        "ru": "коричневый"
       },
       {
-        "word": "pink",
-        "translation": "розовый"
+        "en": "pink",
+        "ru": "розовый"
       },
       {
-        "word": "black",
-        "translation": "черный"
+        "en": "black",
+        "ru": "черный"
       }
     ]
   },
@@ -358,40 +350,40 @@
     "name": "family",
     "words": [
       {
-        "word": "baby",
-        "translation": "младенец"
+        "en": "baby",
+        "ru": "младенец"
       },
       {
-        "word": "family",
-        "translation": "семья"
+        "en": "family",
+        "ru": "семья"
       },
       {
-        "word": "mother",
-        "translation": "мама"
+        "en": "mother",
+        "ru": "мама"
       },
       {
-        "word": "father",
-        "translation": "папа"
+        "en": "father",
+        "ru": "папа"
       },
       {
-        "word": "sister",
-        "translation": "сестра"
+        "en": "sister",
+        "ru": "сестра"
       },
       {
-        "word": "brother",
-        "translation": "брат"
+        "en": "brother",
+        "ru": "брат"
       },
       {
-        "word": "pet",
-        "translation": "питомец"
+        "en": "pet",
+        "ru": "питомец"
       },
       {
-        "word": "grandma",
-        "translation": "бабушка"
+        "en": "grandma",
+        "ru": "бабушка"
       },
       {
-        "word": "grandpa",
-        "translation": "дедушка"
+        "en": "grandpa",
+        "ru": "дедушка"
       }
     ]
   },
@@ -399,52 +391,52 @@
     "name": "home",
     "words": [
       {
-        "word": "armchair",
-        "translation": "кресло"
+        "en": "armchair",
+        "ru": "кресло"
       },
       {
-        "word": "mirror",
-        "translation": "зеркало"
+        "en": "mirror",
+        "ru": "зеркало"
       },
       {
-        "word": "kitchen",
-        "translation": "кухня"
+        "en": "kitchen",
+        "ru": "кухня"
       },
       {
-        "word": "bed",
-        "translation": "кровать"
+        "en": "bed",
+        "ru": "кровать"
       },
       {
-        "word": "toilet",
-        "translation": "туалет"
+        "en": "toilet",
+        "ru": "туалет"
       },
       {
-        "word": "door",
-        "translation": "дверь"
+        "en": "door",
+        "ru": "дверь"
       },
       {
-        "word": "window",
-        "translation": "окно"
+        "en": "window",
+        "ru": "окно"
       },
       {
-        "word": "fridge",
-        "translation": "холодильник"
+        "en": "fridge",
+        "ru": "холодильник"
       },
       {
-        "word": "chair",
-        "translation": "стул"
+        "en": "chair",
+        "ru": "стул"
       },
       {
-        "word": "bath",
-        "translation": "ванная"
+        "en": "bath",
+        "ru": "ванная"
       },
       {
-        "word": "house",
-        "translation": "дом"
+        "en": "house",
+        "ru": "дом"
       },
       {
-        "word": "couch",
-        "translation": "диван"
+        "en": "couch",
+        "ru": "диван"
       }
     ]
   },
@@ -452,48 +444,48 @@
     "name": "city",
     "words": [
       {
-        "word": "bus",
-        "translation": "автобус"
+        "en": "bus",
+        "ru": "автобус"
       },
       {
-        "word": "factory",
-        "translation": "завод"
+        "en": "factory",
+        "ru": "завод"
       },
       {
-        "word": "park",
-        "translation": "парк"
+        "en": "park",
+        "ru": "парк"
       },
       {
-        "word": "excavator",
-        "translation": "экскаватор"
+        "en": "excavator",
+        "ru": "экскаватор"
       },
       {
-        "word": "city",
-        "translation": "город"
+        "en": "city",
+        "ru": "город"
       },
       {
-        "word": "church",
-        "translation": "церковь"
+        "en": "church",
+        "ru": "церковь"
       },
       {
-        "word": "police",
-        "translation": "полиция"
+        "en": "police",
+        "ru": "полиция"
       },
       {
-        "word": "building",
-        "translation": "здание"
+        "en": "building",
+        "ru": "здание"
       },
       {
-        "word": "subway",
-        "translation": "метро"
+        "en": "subway",
+        "ru": "метро"
       },
       {
-        "word": "taxi",
-        "translation": "такси"
+        "en": "taxi",
+        "ru": "такси"
       },
       {
-        "word": "factory",
-        "translation": "завод"
+        "en": "factory",
+        "ru": "завод"
       }
     ]
   },
@@ -501,44 +493,44 @@
     "name": "emotions",
     "words": [
       {
-        "word": "determination",
-        "translation": "решимость"
+        "en": "focus",
+        "ru": "решимость"
       },
       {
-        "word": "happy",
-        "translation": "счастье"
+        "en": "happy",
+        "ru": "счастье"
       },
       {
-        "word": "confusion",
-        "translation": "смущение"
+        "en": "confusion",
+        "ru": "смущение"
       },
       {
-        "word": "despair",
-        "translation": "отчаяние"
+        "en": "despair",
+        "ru": "отчаяние"
       },
       {
-        "word": "sadness",
-        "translation": "грусть"
+        "en": "sadness",
+        "ru": "грусть"
       },
       {
-        "word": "excitement",
-        "translation": "возбуждение"
+        "en": "excitement",
+        "ru": "возбуждение"
       },
       {
-        "word": "anxiety",
-        "translation": "беспокойство"
+        "en": "anxiety",
+        "ru": "беспокойство"
       },
       {
-        "word": "friendship",
-        "translation": "дружба"
+        "en": "friendship",
+        "ru": "дружба"
       },
       {
-        "word": "love",
-        "translation": "любовь"
+        "en": "love",
+        "ru": "любовь"
       },
       {
-        "word": "anger",
-        "translation": "злость"
+        "en": "anger",
+        "ru": "злость"
       }
     ]
   }

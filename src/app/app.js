@@ -1,4 +1,4 @@
-import Card from './Card';
+import { Card } from './Card';
 import categories from './words';
 import './animator';
 
@@ -6,19 +6,19 @@ class App {
   constructor() {
     this.elements = {
       container: null,
-      cards: []
+      words: []
     };
 
     this.properties = {
       playMode: false // привязать к свитчеру
     };
 
-    // this.categories = words.category;
     this.init();
   }
 
   init() {
     this.createCategories();
+    this.createCards();
   }
 
   createCategories() {
@@ -31,6 +31,7 @@ class App {
     categories.forEach(category => {
       const categoryCard = document.createElement('div');
       categoryCard.classList.add('category-card');
+      categoryCard.id = `${category.name}`;
 
       categoryCard.innerHTML = `
           <a href="#${category.name}">
@@ -45,7 +46,64 @@ class App {
   }
 
   createCards() {
-    this.cards = new Card();
+    const items = document.querySelectorAll('.category-card');
+
+    items.forEach((item) => {
+      item.addEventListener('click', () => {
+        this.removeCategories();
+        this.addWords(item.id);
+      });
+    });
+  }
+
+  addWords(id) {
+    categories.forEach(category => {
+      if (id === category.name) {
+        this.words = category.words;
+
+        category.words.forEach(word => {
+          const card = new Card(category.name, word.en, word.ru);
+
+          const wordCard = document.createElement('div');
+          wordCard.classList.add('card__container');
+
+          wordCard.innerHTML = card.html;
+          this.elements.container.append(wordCard);
+
+
+          const outer = wordCard.querySelector('.card');
+          const inner = wordCard.querySelector('.card__card-face');
+          const soundButton = wordCard.querySelector('.sound__button');
+          const infoButton = wordCard.querySelector('.info__button');
+
+          soundButton.addEventListener('click', () => {
+            Card.playSound(word.en);
+          });
+
+          infoButton.addEventListener('click', () => {
+            outer.classList.toggle('flipped');
+            inner.classList.toggle('hidden');
+            infoButton.classList.toggle('hidden');
+            soundButton.classList.toggle('hidden');
+          });
+
+          outer.addEventListener('mouseleave', () => {
+            if (outer.classList.contains('flipped')) {
+              setTimeout(() => {
+                outer.classList.toggle('flipped');
+                inner.classList.toggle('hidden');
+                infoButton.classList.toggle('hidden');
+                soundButton.classList.toggle('hidden');
+              }, 200);
+            }
+          });
+        });
+      }
+    });
+  }
+
+  removeCategories() {
+    this.elements.container.innerHTML = '';
   }
 }
 
@@ -53,18 +111,3 @@ window.addEventListener('DOMContentLoaded', () => {
   const app = new App();
   return app;
 });
-
-// const leftButton = document.querySelector('.sound__button');
-// const rightButton = document.querySelector('.info__button');
-// const card = new Card('rocket', 'ракета', 'assets/images/space/rocket.svg');
-
-// card.addEventListener('click',
-//   function flipCard() {
-//     card.classList.toggle('flipped');
-//     rightButton.classList.toggle('hidden');
-//     leftButton.classList.toggle('hidden');
-//   });
-
-// leftButton.addEventListener('click', () =>{
-//   card.playSound();
-// });

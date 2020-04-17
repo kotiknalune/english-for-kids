@@ -1,26 +1,37 @@
 class Card {
-  constructor(category, word, translation) {
-    this.word = word;
-    this.translation = translation;
+  constructor(category, en, ru) {
+    this.en = en;
+    this.ru = ru;
     this.category = category;
 
-    this.image = new Image();
-    this.image.src = `/src/assets/images/${this.category}/${this.word}.svg`;
-
-    this.audio = new Audio();
-    this.audio.src = `https://wooordhunt.ru/data/sound/word/uk/mp3/${word}.mp3`;
-
     this.playMode = false;
-    // this.timesTrained = timesTrained;
-    // this.timesPlayed = timesPlayed;
-    // this.timesCorrect = timesCorrect;
+    this.html = `
+    <div class="card">
+      <div class="card__card-face">
+        <div class="card__word-image"><img src="/src/assets/images/${category}/${en}.svg" alt="${en}"></div>
+        <div class="card__info">
+          <div class="info__button"><span class="button__icon"></span></div>
+          <div class="info__word">${en}</div>
+          <div class="sound__button"><span class="button__icon"></span></div>
+        </div>
+      </div>
+      <div class="card__card-back">
+        <div class="card__word-image"><img src="/src/assets/images/${category}/${en}.svg" alt="${ru}"></div>
+        <div class="card__info">
+          <div class="info__word">${ru}</div>
+        </div>
+      </div>
+    </div>
+    `;
   }
 
-  playSound() {
-    this.audio.play();
+  static playSound(en) {
+    const audio = new Audio();
+    audio.src = `https://wooordhunt.ru/data/sound/word/uk/mp3/${en}.mp3`;
+    audio.play();
   }
 }
 
-export default {
+export {
   Card
 };
