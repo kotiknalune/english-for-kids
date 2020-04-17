@@ -8,7 +8,7 @@ class Card {
     this.html = `
     <div class="card">
       <div class="card__card-face">
-        <div class="card__word-image"><img src="/src/assets/images/${category}/${en}.svg" alt="${en}"></div>
+        <div class="card__word-image"><img src="public/images/${category}/${en}.svg" alt="${en}"></div>
         <div class="card__info">
           <div class="info__button"><span class="button__icon"></span></div>
           <div class="info__word">${en}</div>
@@ -16,7 +16,7 @@ class Card {
         </div>
       </div>
       <div class="card__card-back">
-        <div class="card__word-image"><img src="/src/assets/images/${category}/${en}.svg" alt="${ru}"></div>
+        <div class="card__word-image"><img src="public/images/${category}/${en}.svg" alt="${ru}"></div>
         <div class="card__info">
           <div class="info__word">${ru}</div>
         </div>
