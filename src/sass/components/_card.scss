@@ -9,9 +9,20 @@
     position: relative;
     top: 18px;
     left: 44px;
+    transition: 0.3s ease;
+
+    &.play-img {
+      width: 175px;
+      position: relative;
+      top: 31px;
+      left: 37px;
+    }
   }
 }
 
+.play-info {
+  visibility: hidden;
+}
 .card__info {
   display: flex;
   justify-content: space-around;
@@ -55,7 +66,7 @@
       left: 10px;
       background: url(/src/assets/icons/sound.svg);
       background-size: cover;
-    }   
+    }
 }
 
 .card__container {
@@ -81,10 +92,10 @@
 
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
-}
 
-.card:hover {
- box-shadow: 5px 6px 17px #24d7f7;
+  &:hover {
+    box-shadow: 5px 6px 17px #24d7f7;
+  }
 }
 
 .flipped {
@@ -107,11 +118,4 @@
 .card__card-back {
   transform: rotateY(180deg);
   backface-visibility: hidden;
-}
-
-.card__play {
-  width: 195px;
-  position: relative;
-  top: 25px;
-  left: 11.5%;
 }

@@ -2,14 +2,22 @@ body {
     margin: 0;
     background: linear-gradient(-45deg, #f191a9, #6d5bbe, #23a6d5, #23d5ab);
 	background-size: 150em 150em;
-	animation: gradient 15s ease infinite;
-	//overflow: hidden;
+	// animation: gradient 15s ease infinite;
+	// overflow: hidden;
 	transition: 0.5s ease;
+
+	@media screen and (max-width:660px) {
+	 background-size: 150em;
+	}
 }
 
 .play-mode {
     background: linear-gradient(-45deg, #23d5ab, #b2f191, #23a6d5, #346bbc);
-    background-size: 150em 150em;
+	background-size: 150em 150em;
+	
+	@media screen and (max-width:660px) {
+		background-size: 150em;
+	   }
   }
 
 .app-container {

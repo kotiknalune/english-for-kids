@@ -34,20 +34,42 @@ a {
   text-decoration: none;
 }
 
-.logo {
+.logo a {
   font-family: "Pacifico", Verdana, cursive;
   font-weight: normal;
   font-size: 3.5rem;
-}
-.logo a {
   color: #ffffff;
+  text-shadow: 0px 3px 3px #30296f;
+  transition: 0.3s ease;
+}
+.logo a:hover {
+  color: #c7fbff;
+}
+.logo a:active {
+  text-shadow: 0px 3px 0px #30296f;
+  transition: color 0.3s ease;
+}
+@media screen and (max-width: 520px) {
+  .logo a {
+    display: none;
+  }
+}
+@media screen and (min-width: 519px) and (max-width: 660px) {
+  .logo a {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 659px) and (max-width: 960px) {
+  .logo a {
+    font-size: 3rem;
+  }
 }
 
 .navigation__toggle {
   width: 45px;
   height: 45px;
   position: relative;
-  z-index: 3;
+  z-index: 7;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -81,6 +103,39 @@ a {
 .navigation__toggle span:nth-child(4) {
   top: 24px;
 }
+.navigation__toggle.open {
+  transform: translate(135px, 0px);
+}
+@media screen and (min-width: 320px) and (max-width: 629px) {
+  .navigation__toggle.open {
+    transform: translate(190px, 0px);
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 401px) {
+  .navigation__toggle.open {
+    transform: translate(170px, 0px);
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 631x) {
+  .navigation__toggle.open {
+    transform: translate(155px, 0px);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .navigation__toggle.open {
+    transform: translate(120px, 0px);
+  }
+}
+@media screen and (min-width: 1500px) {
+  .navigation__toggle.open {
+    transform: translate(95px, 0px);
+  }
+}
+@media screen and (min-width: 1700px) {
+  .navigation__toggle.open {
+    transform: translate(40px, 0px);
+  }
+}
 .navigation__toggle.open span:nth-child(1), .navigation__toggle.open span:nth-child(4) {
   top: 18px;
   width: 0%;
@@ -102,16 +157,29 @@ a {
   flex-direction: column;
   box-sizing: border-box;
   position: absolute;
-  z-index: 2;
-  width: 350px;
+  z-index: 6;
+  width: 290px;
   height: calc(100vh + 20px);
   margin: -95px 0 0;
-  padding: 125px 0px 50px;
+  padding: 40px 0px 50px;
   left: -355px;
   background: linear-gradient(40deg, #ffd86f, #fc6262);
   list-style-type: none;
   transition: 0.5s ease;
   overflow: hidden scroll;
+  box-shadow: 5px 0px 10px #00000033;
+}
+@media screen and (min-width: 320px) {
+  .menu {
+    height: calc(100vh + 65px);
+    padding: 40px 0px 5px;
+  }
+}
+@media screen and (min-width: 360px) {
+  .menu {
+    height: calc(100vh + 10px);
+    padding: 40px 0px 65px;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -123,58 +191,54 @@ a {
   left: 0;
 }
 
+.stop-scroll {
+  overflow: hidden;
+}
+
 .menu__item {
   height: 60px;
-  width: 265px;
   display: inline-block;
   margin: 0;
-  padding-left: 90px;
+  padding-left: 65px;
   transition: 0.3s ease;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 .menu__item:hover {
   transform: translate(10px, -3px);
 }
-.menu__item.active {
-  background-color: #6d5bbe;
-  height: 65px;
-  margin-left: -10px;
-}
 .menu__item.active a {
-  font-size: 1.9rem;
-}
-.menu__item.active a:before {
-  width: 45px;
-  height: 45px;
+  font-size: 1.7rem;
+  line-height: 3.1rem;
+  background: #6d5bbe;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-left: -20px;
 }
 .menu__item a {
-  text-decoration: none;
   color: white;
-  font-family: "Lato";
-  font-size: 1.7rem;
+  font-family: "Lato", Verdana, sans-serif;
+  font-size: 1.5rem;
   transition: 0.3s ease;
 }
 .menu__item a:before {
   content: "";
   display: inline-block;
   position: relative;
-  width: 40px;
-  height: 40px;
-  margin-right: 17px;
-  top: 10px;
+  width: 31px;
+  height: 30px;
+  margin-right: 10px;
+  top: 7px;
   background-position: center;
   background-size: contain;
   transition: 0.3s ease;
 }
 .menu__item a:hover {
-  font-size: 1.9rem;
-}
-.menu__item a:hover:before {
-  width: 45px;
-  height: 45px;
+  font-size: 1.7rem;
 }
 
+.menu__link:before {
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .menu__link.main:before {
   background-image: url(/src/assets/icons/earth.svg);
 }
@@ -209,6 +273,28 @@ a {
   background-image: url(/src/assets/icons/nose.svg);
 }
 
+.overlay {
+  display: none;
+  transition: 0.3s ease;
+}
+
+.engaged {
+  height: calc(100vh + 0px);
+  width: calc(100vw + 0px);
+  background: #00000035;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: block;
+}
+@media screen and (min-width: 320px) {
+  .engaged {
+    height: calc(100vh + 60px);
+    width: calc(100vw + 25px);
+  }
+}
+
 #switch__input {
   opacity: 0;
   height: 0;
@@ -225,6 +311,23 @@ a {
   border-radius: 50px;
   transition: 500ms;
   overflow: hidden;
+}
+@media screen and (min-width: 320px) and (max-width: 359px) {
+  .toggle__switch {
+    top: -9px;
+    right: 11px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 479px) {
+  .toggle__switch {
+    top: -7px;
+    right: 16px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .toggle__switch {
+    right: 33px;
+  }
 }
 
 .switch__handle {
@@ -287,6 +390,16 @@ a {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  .container__cards {
+    padding-top: 0px;
+  }
+}
+@media screen and (min-width: 959px) {
+  .container__cards {
+    padding-top: 15px;
+  }
 }
 
 .category-card {
@@ -377,6 +490,17 @@ a {
   position: relative;
   top: 18px;
   left: 44px;
+  transition: 0.3s ease;
+}
+.card__word-image img.play-img {
+  width: 175px;
+  position: relative;
+  top: 31px;
+  left: 37px;
+}
+
+.play-info {
+  visibility: hidden;
 }
 
 .card__info {
@@ -444,7 +568,6 @@ a {
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
 }
-
 .card:hover {
   box-shadow: 5px 6px 17px #24d7f7;
 }
@@ -471,24 +594,118 @@ a {
   backface-visibility: hidden;
 }
 
-.card__play {
-  width: 195px;
-  position: relative;
-  top: 25px;
-  left: 11.5%;
+.play-panel {
+  width: 90px;
+  height: 185px;
+  position: fixed;
+  z-index: 10;
+  top: 150px;
+  right: -120px;
+  border-top-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  background: #ffdd82;
+  border: 2px solid #24d7f7;
+  border-right: none;
+  box-shadow: 0px 2px 29px cyan;
+  transition: 0.5s ease;
+}
+.play-panel.on {
+  right: 0;
+}
+
+.restart-game, .start-game {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 30%;
+  font-family: "Inter";
+  font-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+  box-shadow: 0px 4px #4a3d82;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.restart-game:hover, .start-game:hover {
+  background-color: #fc6262;
+}
+.restart-game:active, .start-game:active {
+  box-shadow: 0px 2px #4a3d82;
+  outline: none;
+}
+.restart-game:focus, .start-game:focus {
+  outline: none;
+}
+
+.start-game {
+  background-image: url("https://svgshare.com/i/KDD.svg");
+  background-color: #6c5abf;
+}
+
+.restart-game {
+  background-image: url("https://svgshare.com/i/KBy.svg");
+  background-color: #24d7f7;
+}
+
+.no-display {
+  display: none;
+}
+
+.points {
+  height: 30px;
+  width: 89%;
+  margin: 0 auto;
+  margin-bottom: -20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding-top: 12px;
+}
+
+.no-star, .star {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-left: 10px;
+  background-size: contain;
+  background-position: center;
+}
+
+.star {
+  background-image: url("https://svgshare.com/i/KCh.svg");
+}
+
+.no-star {
+  background-image: url("https://svgshare.com/i/KD3.svg");
 }
 
 body {
   margin: 0;
   background: linear-gradient(-45deg, #f191a9, #6d5bbe, #23a6d5, #23d5ab);
   background-size: 150em 150em;
-  animation: gradient 15s ease infinite;
   transition: 0.5s ease;
+}
+@media screen and (max-width: 660px) {
+  body {
+    background-size: 150em;
+  }
 }
 
 .play-mode {
   background: linear-gradient(-45deg, #23d5ab, #b2f191, #23a6d5, #346bbc);
   background-size: 150em 150em;
+}
+@media screen and (max-width: 660px) {
+  .play-mode {
+    background-size: 150em;
+  }
 }
 
 .app-container {

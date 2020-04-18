@@ -1,0 +1,30 @@
+.points {
+  height: 30px;
+    width: 89%;
+    margin: 0 auto;
+    margin-bottom: -20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding-top: 12px;
+}
+
+%point {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-left: 10px;
+    background-size: contain;
+    background-position: center;
+}
+
+.star {
+    @extend%point;
+    background-image: url("https://svgshare.com/i/KCh.svg");
+}
+.no-star {
+    @extend%point;
+    background-image: url("https://svgshare.com/i/KD3.svg");
+}

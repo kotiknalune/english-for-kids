@@ -14,6 +14,20 @@
     border-radius: 50px;
     transition: 500ms;
     overflow: hidden;
+
+    @media screen and (min-width:320px) and (max-width:359px) {
+      top: -9px;
+      right: 11px;
+     }
+
+     @media screen and (min-width:360px) and (max-width:479px) {
+      top: -7px;
+      right:16px;
+     }
+
+     @media screen and (min-width:480px) and (max-width:768px) {
+      right:33px;
+     }
   }
   
   .switch__handle {

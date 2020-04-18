@@ -4,7 +4,6 @@ class Card {
     this.ru = ru;
     this.category = category;
 
-    this.playMode = false;
     this.html = `
     <div class="card">
       <div class="card__card-face">
@@ -16,7 +15,7 @@ class Card {
         </div>
       </div>
       <div class="card__card-back">
-        <div class="card__word-image"><img src="public/images/${category}/${en}.svg" alt="${ru}"></div>
+        <div class="card__word-image"><img src="public/images/${category}/${en}.svg" alt="${en}"></div>
         <div class="card__info">
           <div class="info__word">${ru}</div>
         </div>
