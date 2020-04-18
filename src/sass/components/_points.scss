@@ -1,21 +1,31 @@
 .points {
-  height: 30px;
-    width: 89%;
+    height: 30px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     margin-bottom: -20px;
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    overflow: hidden;
-    flex-wrap: wrap;
+    overflow-x: hidden;
     padding-top: 12px;
+    margin-bottom: -10px;
+
+    @media screen and (max-width:952px) {
+        margin-bottom: 10px;
+    }
+    @media screen and (min-width:953px) and (max-width:1270px) {
+        margin-bottom: 0px;
+    }
+    @media screen and (min-width:1271px) {
+        margin-bottom: -10px;
+    }
 }
 
 %point {
     width: 30px;
     height: 30px;
-    display: block;
     margin-left: 10px;
+    flex-shrink: 0;
     background-size: contain;
     background-position: center;
 }

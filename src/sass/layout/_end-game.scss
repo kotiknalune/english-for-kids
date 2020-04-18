@@ -1,0 +1,66 @@
+.end-screen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #23d5ab;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 8px 30px cyan;
+    border: 2px solid cyan;
+
+    h1 {
+        font-family: "Inter";
+        color: #f7ffff;
+        text-shadow: 0px 5px 1px #14a281;
+        font-size: 3rem;
+        line-height: 1rem;
+    }
+
+    p {
+        color: white;
+        font-size: 1.3rem;
+        font-family: "INter";
+        line-height: 0rem
+    }
+
+    img {
+        width: 250px;
+        margin-top: 25px;
+        margin-left: -13px;
+    }
+}
+%end-button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 30%;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: center;
+    box-shadow: 0px 4px #4a3d82;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: #fc6262;;
+    }
+    &:active {
+        box-shadow: 0px 2px #4a3d82;
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.home-button {
+    @extend%end-button;
+    background: #f191a9;
+}
+
+.again-button {
+    @extend%end-button;
+    background: #ffdd82;;
+
+}
