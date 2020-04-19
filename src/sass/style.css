@@ -244,40 +244,40 @@ a {
   background-position: center;
 }
 .menu__link.main:before {
-  background-image: url(/src/assets/icons/earth.svg);
+  background-image: url("https://svgshare.com/i/KFw.svg");
 }
 .menu__link.space:before {
-  background-image: url(/src/assets/icons/moon.svg);
+  background-image: url("https://svgshare.com/i/KFb.svg");
 }
 .menu__link.food:before {
-  background-image: url(/src/assets/icons/apple.svg);
+  background-image: url("https://svgshare.com/i/KEu.svg");
 }
 .menu__link.nature:before {
-  background-image: url(/src/assets/icons/log.svg);
+  background-image: url("https://svgshare.com/i/KFF.svg");
 }
 .menu__link.animals:before {
-  background-image: url(/src/assets/icons/fox.svg);
+  background-image: url("https://svgshare.com/i/KFx.svg");
 }
 .menu__link.emotions:before {
-  background-image: url(/src/assets/icons/happy.svg);
+  background-image: url("https://svgshare.com/i/KF5.svg");
 }
 .menu__link.colors:before {
-  background-image: url(/src/assets/icons/art.svg);
+  background-image: url("https://svgshare.com/i/KEv.svg");
 }
 .menu__link.activities:before {
-  background-image: url(/src/assets/icons/ball.svg);
+  background-image: url("https://svgshare.com/i/KFy.svg");
 }
 .menu__link.city:before {
-  background-image: url(/src/assets/icons/traffic.svg);
+  background-image: url("https://svgshare.com/i/KF6.svg");
 }
 .menu__link.family:before {
-  background-image: url(/src/assets/icons/heart.svg);
+  background-image: url("https://svgshare.com/i/KFc.svg");
 }
 .menu__link.body:before {
-  background-image: url(/src/assets/icons/nose.svg);
+  background-image: url("https://svgshare.com/i/KG7.svg");
 }
 .menu__link.home:before {
-  background-image: url(/src/assets/icons/home.svg);
+  background-image: url("https://svgshare.com/i/KFd.svg");
 }
 
 .overlay {
@@ -533,7 +533,7 @@ a {
   height: 25px;
   top: 8px;
   left: 8px;
-  background: url(/src/assets/icons/rotate.svg);
+  background: url("https://svgshare.com/i/KEp.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -552,7 +552,7 @@ a {
   height: 19px;
   top: 12px;
   left: 10px;
-  background: url(/src/assets/icons/sound.svg);
+  background: url("https://svgshare.com/i/KFa.svg");
   background-size: cover;
 }
 
@@ -574,7 +574,7 @@ a {
   border-radius: 19px;
   position: absolute;
   box-shadow: -1px 15px 30px -12px black;
-  z-index: 99;
+  z-index: 1;
   transition: 0.5s ease;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;

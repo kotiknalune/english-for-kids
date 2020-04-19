@@ -1,5 +1,6 @@
 import { Card } from './Card';
 import categories from './words';
+import { toggleMenu } from './animator';
 import './animator';
 
 class App {
@@ -59,91 +60,76 @@ class App {
 
       categoryCard.addEventListener('click', () => {
         this.removeElements();
-        this.addWords(category.name);
+        this.addWords(category);
       });
 
       const menu = document.querySelector('.menu');
       const menuLink = document.createElement('li');
       menuLink.classList.add('menu__item');
       menuLink.innerHTML = `<a class="menu__link ${category.name}" href="#${category.name}">${category.name}</a>`;
+
+      menuLink.addEventListener('click', () => {
+        this.removeElements();
+        this.addWords(category);
+        toggleMenu();
+      });
+
       menu.append(menuLink);
     });
-
-    this.menuNavigation();
   }
 
-  menuNavigation() {
-    const logo = document.querySelector('.logo');
-    logo.addEventListener('click', () => {
-      this.removeElements();
-      this.createCategories();
-    });
+  addWords(category) {
+    category.words.forEach(word => {
+      const card = new Card(category.name, word.en, word.ru);
 
-    // const menu = document.querySelector('.menu');
-    // menu.forEach((link) => {
-    // link.addEventListener('click', () => {
-    //  console.log(link);
-    // this.removeElements();
-    // this.addWords(categories.category.name);
-    //  });
-    // });
-    // hang .active class on li
-  }
+      const wordCard = document.createElement('div');
+      wordCard.classList.add('card__container');
 
-  addWords(name) {
-    categories.forEach(category => {
-      if (name === category.name) {
-        this.words = category.words;
+      wordCard.innerHTML = card.html;
+      this.elements.container.append(wordCard);
 
-        category.words.forEach(word => {
-          const card = new Card(category.name, word.en, word.ru);
+      const outer = wordCard.querySelector('.card');
+      const inner = wordCard.querySelector('.card__card-face');
+      const soundButton = wordCard.querySelector('.sound__button');
+      const infoButton = wordCard.querySelector('.info__button');
 
-          const wordCard = document.createElement('div');
-          wordCard.classList.add('card__container');
-
-          wordCard.innerHTML = card.html;
-          this.elements.container.append(wordCard);
-
-          const outer = wordCard.querySelector('.card');
-          const inner = wordCard.querySelector('.card__card-face');
-          const soundButton = wordCard.querySelector('.sound__button');
-          const infoButton = wordCard.querySelector('.info__button');
-
-          if (this.properties.playMode !== true) {
-            outer.addEventListener('click', (e) => {
-              if (!this.properties.playMode && !e.target.classList.contains('info')) {
-                Card.playSound(word.en);
-              }
-            });
-
-            const rotateCard = () => {
-              outer.classList.toggle('flipped');
-              inner.classList.toggle('hidden');
-              infoButton.classList.toggle('hidden');
-              soundButton.classList.toggle('hidden');
-            };
-
-            infoButton.addEventListener('click', () => {
-              rotateCard();
-            });
-
-            outer.addEventListener('mouseleave', () => {
-              if (outer.classList.contains('flipped')) {
-                setTimeout(() => {
-                  rotateCard();
-                }, 200);
-              }
-            });
-          } else {
-            this.cardModeSwitcher();
+      if (this.properties.playMode !== true) {
+        outer.addEventListener('click', (e) => {
+          if (!this.properties.playMode && !e.target.classList.contains('info')) {
+            Card.playSound(word.en);
           }
         });
+
+        const rotateCard = () => {
+          outer.classList.toggle('flipped');
+          inner.classList.toggle('hidden');
+          infoButton.classList.toggle('hidden');
+          soundButton.classList.toggle('hidden');
+        };
+
+        infoButton.addEventListener('click', () => {
+          rotateCard();
+        });
+
+        outer.addEventListener('mouseleave', () => {
+          if (outer.classList.contains('flipped')) {
+            setTimeout(() => {
+              rotateCard();
+            }, 200);
+          }
+        });
+      } else {
+        this.cardModeSwitcher();
       }
     });
-
+    this.properties.gameStarted = false;
     const startGame = document.querySelector('.start-game');
+    const repeatSound = document.querySelector('.repeat-sound');
+    repeatSound.classList.add('disabled');
+    repeatSound.disabled = true;
     startGame.classList.remove('disabled');
     startGame.disabled = false;
+    this.elements.pointContainer.innerHTML = '';
   }
 
   cardModeSwitcher() {
@@ -190,6 +176,10 @@ class App {
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
         properties.playMode = true;
+
+        startGame.classList.remove('disabled');
+        startGame.disabled = false;
+
         this.cardModeSwitcher();
       } else {
         properties.playMode = false;

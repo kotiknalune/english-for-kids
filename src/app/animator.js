@@ -8,6 +8,16 @@ const toggleMenu = () => {
   menu.classList.toggle('show');
   body.classList.toggle('stop-scroll');
   overlay.classList.toggle('engaged');
+
+  menu.querySelectorAll('li').forEach((link, index) => {
+    let clickedCategory = window.location.toString().split('#')[1];
+
+    if (link.innerHTML.includes(clickedCategory) || (!clickedCategory && index === 0)) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
 };
 
 navToggle.addEventListener('click', toggleMenu);
@@ -21,3 +31,7 @@ checkBox.addEventListener('click', () => {
     body.classList.remove('play-mode');
   }
 });
+
+export {
+  toggleMenu
+};
