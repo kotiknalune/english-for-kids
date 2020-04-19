@@ -80,6 +80,10 @@ module.exports = (env, options) => {
           ]
         },
         {
+          test: /\.(png|svg)$/,
+          loader: 'url-loader'
+        },
+        {
           test: /\.html$/i,
           use: [
             {

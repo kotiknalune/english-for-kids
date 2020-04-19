@@ -417,7 +417,7 @@ a {
   border-radius: 19px;
   position: relative;
   box-shadow: -1px 15px 30px -12px black;
-  z-index: 9999;
+  z-index: 1;
   transition: 0.5s ease;
   cursor: pointer;
 }
@@ -760,7 +760,6 @@ body {
   width: 85vw;
   margin: 0 auto;
   margin-top: 20px;
-  animation: fadeIn ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
