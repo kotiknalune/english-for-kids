@@ -177,8 +177,10 @@ class App {
       if (checkbox.checked) {
         properties.playMode = true;
 
-        startGame.classList.remove('disabled');
-        startGame.disabled = false;
+        if (window.location.toString().split('#').length !== 1) {
+          startGame.classList.remove('disabled');
+          startGame.disabled = false;
+        }
 
         this.cardModeSwitcher();
       } else {
@@ -289,6 +291,7 @@ class App {
     this.cardModeSwitcher();
 
     const checkbox = document.querySelector('input[type="checkbox"]');
+    document.querySelector('.play-panel').classList.remove('on');
     checkbox.checked = false;
 
     if (total === correct) {

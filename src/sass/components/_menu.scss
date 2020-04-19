@@ -1,3 +1,6 @@
+.navigation {
+  z-index:101;
+}
 .navigation__toggle {
   width: 45px;
   height: 45px;
@@ -255,7 +258,7 @@
   width: calc(100vw + 0px);
   background: #00000035;
   position: fixed;
-  z-index: 5;
+  z-index: 100;
   top: 0;
   left: 0;
   display: block;
