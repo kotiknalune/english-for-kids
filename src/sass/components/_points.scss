@@ -19,7 +19,13 @@
     @media screen and (min-width:1271px) {
         margin-bottom: -10px;
     }
+
+    &.no-display div {
+        display:none;
+    }
+    
 }
+
 
 %point {
     width: 30px;

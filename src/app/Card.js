@@ -9,7 +9,7 @@ class Card {
       <div class="card__card-face">
         <div class="card__word-image"><img src="public/images/${category}/${en}.svg" alt="${en}"></div>
         <div class="card__info">
-          <div class="info__button"><span class="button__icon"></span></div>
+          <div class="info__button"><span class="button__icon info"></span></div>
           <div class="info__word">${en}</div>
           <div class="sound__button"><span class="button__icon"></span></div>
         </div>

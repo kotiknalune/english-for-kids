@@ -22,6 +22,7 @@ class App {
     this.createContainer();
     this.createCategories();
     this.setupPlayMode();
+    this.startGame();
   }
 
   createContainer() {
@@ -60,7 +61,33 @@ class App {
         this.removeElements();
         this.addWords(category.name);
       });
+
+      const menu = document.querySelector('.menu');
+      const menuLink = document.createElement('li');
+      menuLink.classList.add('menu__item');
+      menuLink.innerHTML = `<a class="menu__link ${category.name}" href="#${category.name}">${category.name}</a>`;
+      menu.append(menuLink);
     });
+
+    this.menuNavigation();
+  }
+
+  menuNavigation() {
+    const logo = document.querySelector('.logo');
+    logo.addEventListener('click', () => {
+      this.removeElements();
+      this.createCategories();
+    });
+
+    // const menu = document.querySelector('.menu');
+    // menu.forEach((link) => {
+    // link.addEventListener('click', () => {
+    //  console.log(link);
+    // this.removeElements();
+    // this.addWords(categories.category.name);
+    //  });
+    // });
+    // hang .active class on li
   }
 
   addWords(name) {
@@ -77,73 +104,117 @@ class App {
           wordCard.innerHTML = card.html;
           this.elements.container.append(wordCard);
 
-
           const outer = wordCard.querySelector('.card');
           const inner = wordCard.querySelector('.card__card-face');
           const soundButton = wordCard.querySelector('.sound__button');
           const infoButton = wordCard.querySelector('.info__button');
 
-          soundButton.addEventListener('click', () => {
-            Card.playSound(word.en);
-          });
+          if (this.properties.playMode !== true) {
+            outer.addEventListener('click', (e) => {
+              if (!this.properties.playMode && !e.target.classList.contains('info')) {
+                Card.playSound(word.en);
+              }
+            });
 
-          infoButton.addEventListener('click', () => {
-            outer.classList.toggle('flipped');
-            inner.classList.toggle('hidden');
-            infoButton.classList.toggle('hidden');
-            soundButton.classList.toggle('hidden');
-          });
+            const rotateCard = () => {
+              outer.classList.toggle('flipped');
+              inner.classList.toggle('hidden');
+              infoButton.classList.toggle('hidden');
+              soundButton.classList.toggle('hidden');
+            };
 
-          outer.addEventListener('mouseleave', () => {
-            if (outer.classList.contains('flipped')) {
-              setTimeout(() => {
-                outer.classList.toggle('flipped');
-                inner.classList.toggle('hidden');
-                infoButton.classList.toggle('hidden');
-                soundButton.classList.toggle('hidden');
-              }, 200);
-            }
-          });
+            infoButton.addEventListener('click', () => {
+              rotateCard();
+            });
+
+            outer.addEventListener('mouseleave', () => {
+              if (outer.classList.contains('flipped')) {
+                setTimeout(() => {
+                  rotateCard();
+                }, 200);
+              }
+            });
+          } else {
+            this.cardModeSwitcher();
+          }
         });
-      }
-    });
-  }
-
-  cardModeSwitcher() {
-    this.properties.playMode = true;
-    document.querySelectorAll('.card__info').forEach((info) => {
-      info.classList.toggle('play-info');
-    });
-    document.querySelectorAll('.card__word-image > img').forEach((image) => {
-      image.classList.toggle('play-img');
-    });
-
-    document.querySelector('.play-panel').classList.toggle('on');
-    document.querySelector('.points').classList.toggle('no-display');
-  }
-
-
-  setupPlayMode() {
-    const { elements, properties } = this;
-
-    const checkbox = document.querySelector('input[type="checkbox"]');
-
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked === true) {
-        properties.playMode = true;
-        this.cardModeSwitcher();
-      } else {
-        properties.playMode = false;
-        this.cardModeSwitcher();
       }
     });
 
     const startGame = document.querySelector('.start-game');
+    startGame.classList.remove('disabled');
+    startGame.disabled = false;
+  }
+
+  cardModeSwitcher() {
+    this.properties.gameStarted = false;
+
+    if (this.properties.playMode) {
+      document.querySelectorAll('.card__info').forEach((info) => {
+        info.classList.add('play-info');
+      });
+      document.querySelectorAll('.card__word-image > img').forEach((image) => {
+        image.classList.add('play-img');
+      });
+
+      document.querySelector('.points').classList.remove('no-display');
+      document.querySelector('.play-panel').classList.add('on');
+    } else {
+      document.querySelectorAll('.card__info').forEach((info) => {
+        info.classList.remove('play-info');
+      });
+      document.querySelectorAll('.card__word-image > img').forEach((image) => {
+        image.classList.remove('play-img');
+        image.classList.remove('checked');
+      });
+
+      document.querySelector('.points').classList.add('no-display');
+      document.querySelector('.points').innerHTML = '';
+      document.querySelector('.play-panel').classList.remove('on');
+    }
+  }
+
+  setupPlayMode() {
+    const { properties } = this;
+
+    const checkbox = document.querySelector('input[type="checkbox"]');
+    const startGame = document.querySelector('.start-game');
+    const repeatSound = document.querySelector('.repeat-sound');
+
+    repeatSound.classList.add('disabled');
+    repeatSound.disabled = true;
+
+    startGame.classList.add('disabled');
+    startGame.disabled = true;
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        properties.playMode = true;
+        this.cardModeSwitcher();
+      } else {
+        properties.playMode = false;
+
+        repeatSound.classList.add('disabled');
+        repeatSound.disabled = true;
+
+        this.cardModeSwitcher();
+      }
+    });
+  }
+
+  startGame() {
+    const startGame = document.querySelector('.start-game');
+    const repeatSound = document.querySelector('.repeat-sound');
+
+    const { elements, properties } = this;
     startGame.addEventListener('click', () => {
       if (properties.gameStarted === false) {
         categories.forEach((category) => {
           if (window.location.href.indexOf(category.name) > -1) {
             elements.words = [];
+
+            startGame.classList.remove('disabled');
+            startGame.disabled = false;
 
             category.words.forEach((word) => {
               elements.words.push(word.en);
@@ -159,6 +230,9 @@ class App {
         startGame.classList.add('disabled');
         startGame.disabled = true;
 
+        repeatSound.classList.remove('disabled');
+        repeatSound.disabled = false;
+
         const playingCards = document.querySelectorAll('.card');
 
         const playNextWord = () => {
@@ -172,7 +246,6 @@ class App {
           }
         };
 
-        const repeatSound = document.querySelector('.repeat-sound');
         repeatSound.addEventListener('click', () => {
           Card.playSound(elements.words[0]);
         });
@@ -188,16 +261,18 @@ class App {
             const alt = card.querySelector('.play-img').alt;
             const targetWord = elements.words[0];
             if (alt === targetWord) {
+              card.querySelector('.play-img').classList.add('checked');
+
               App.playSoundEffect('correct');
               playNextWord();
               addStar('star');
-            } else if (alt !== targetWord) {
+            } else if (alt !== targetWord && elements.words.includes(alt)) {
               App.playSoundEffect('wrong');
               addStar('no-star');
             }
             if (elements.words.length === 0) {
               properties.gameStarted = false;
-              console.log('accessed');
+
               const totalCards = document.querySelector('.points').childElementCount;
               const correctAnswers = document.querySelectorAll('.star').length;
 
@@ -228,27 +303,29 @@ class App {
 
     if (total === correct) {
       const winScreen = `
-        <button type="button" class="home-button"></button>
         <div class="end-screen">
-        <h1>Congratulations!</h1>
+        <h1>Good!</h1>
         <p>You guessed ${correct} out of ${total} words</p>
         <img src="public/icons/win.svg">
-        </div>
-        <button type="button" class="again-button"></button>`;
+        </div>`;
       this.elements.container.innerHTML = winScreen;
       App.playSoundEffect('win');
     } else {
       const loseScreen = `
-        <button type="button" class="home-button"></button>
         <div class="end-screen">
-        <h1>Opps...</h1>
+        <h1>Oh no...</h1>
         <p>You guessed ${correct} out of ${total} words</p>
         <img src="public/icons/lose.svg">
-        </div>
-        <button type="button" class="again-button"></button>`;
+        </div>`;
       this.elements.container.innerHTML = loseScreen;
       App.playSoundEffect('lose');
     }
+
+    const returnHome = () => {
+      this.removeElements();
+      App.removesHash();
+    };
+    setTimeout(returnHome, 3000);
   }
 
   static playSoundEffect(effect) {
@@ -259,6 +336,13 @@ class App {
 
   static shuffle(array) {
     array.sort(() => Math.random() - 0.5);
+  }
+
+  static removesHash() {
+    let url = window.location.toString();
+    if (url.includes('#')) {
+      window.location = url.split('#')[0];
+    }
   }
 }
 

@@ -16,6 +16,11 @@
       position: relative;
       top: 31px;
       left: 37px;
+      transition: 0.3s ease;
+
+      &.checked {
+        opacity: 0.5;
+      }
     }
   }
 }

@@ -59,14 +59,13 @@
     }
 }
 
-
 .repeat-sound {
     @extend%panel-button;
 
     background-image: url("https://svgshare.com/i/KBy.svg");
     background-color: rgba(36,215,247,1);
-}
 
-.no-display {
-    display:none;
+    &.disabled {
+        background-color:#9e9e9e;
+    }
 }
