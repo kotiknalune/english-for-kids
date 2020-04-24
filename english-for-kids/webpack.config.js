@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -22,18 +22,18 @@ module.exports = (env, options) => {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: 'src/index.html',
-        favicon: "src/favicon.ico"
+        favicon: 'src/favicon.ico'
 
       }),
       new MiniCssExtractPlugin({
         filename: 'style.css'
       }),
       new CopyPlugin([
-        { 
-          from: 'src/assets', 
-          to: 'public' 
-      }
-      ]),
+        {
+          from: 'src/assets',
+          to: 'public'
+        }
+      ])
     ],
     module: {
       rules: [
